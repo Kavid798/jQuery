@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <style>
+        .border {
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+        }
+        .img {
+            background-image: url('Images/bl29bankingvirtualpix.jpg');
+        }
+        /*.blueColor
+        {
+            background-color:aqua;
+        }*/
+    </style>
+    <script>
+        //$(document).ready(function () {
+        //    $("#cmdreset").hide()
+        //})
+        $(document).ready(function (){
+            //$("#cmdreset").hide()
+            $("#p1").click(function(){
+                //$("#cmdreset").show();
+                $("#d1").addClass("img");
+                $("#d2").fadeOut(5000);
+                $("#d2").slideToggle(5000);
+                var d = $("p1").text();
+                alert(d); 
+                $("#p1").text("I m a Div Tag");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p id="p1" class="border">
+        Paragraph Tag
+    </p>
+    <hr/>
+    <div id="d1" class="border">
+        Div Tag
+    </div>
+    <div id="d2" class="border">
+        Div2 Tag
+    </div>
+   <input type="submit" value="submit" id="cmdsubmit" />
+    <input type="reset" value="reset" id="cmdreset"/>
+</body>
+</html>
